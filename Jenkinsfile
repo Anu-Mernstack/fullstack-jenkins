@@ -2,13 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
-            steps {
-                git branch: 'main',
-                url: 'https://github.com/Anu-Mernstack/fullstack-jenkins.git'
-            }
-        }
-
+        
         stage('Build Backend') {
             steps {
                 echo 'Building backend...'
