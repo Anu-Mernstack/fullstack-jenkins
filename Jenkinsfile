@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/your-username/fullstack-jenkins-dummy.git'
+                git 'https://github.com/Anu-Mernstack/fullstack-jenkins.git'
             }
         }
 
