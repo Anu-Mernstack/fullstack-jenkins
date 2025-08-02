@@ -30,7 +30,7 @@ pipeline {
             }
         }
 
-        stage('Deploy') {
+        stage('Deploy') { 
             steps {
                 echo 'Deploying application...'
                 sh 'echo Deployment successful'
