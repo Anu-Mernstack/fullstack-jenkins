@@ -2,45 +2,44 @@ pipeline {
     agent any
 
     stages {
-        
         stage('Build Backend') {
             steps {
-                echo 'Building backend...'
-                sh 'echo Simulated backend build'
+                echo '🔧 Building backend...'
+                bat 'type backend\\server.js'
             }
         }
 
         stage('Build Frontend') {
             steps {
-                echo 'Building frontend...'
-                sh 'echo Simulated frontend build'
+                echo '🎨 Building frontend...'
+                bat 'type frontend\\index.html'
             }
         }
 
         stage('Test') {
             steps {
-                echo 'Running tests...'
-                sh 'echo All tests passed'
+                echo '✅ Running tests...'
+                bat 'echo All dummy tests passed.'
             }
         }
 
-        stage('Deploy') { 
+        stage('Deploy') {
             steps {
-                echo 'Deploying application...'
-                sh 'echo Deployment successful'
+                echo '🚀 Deploying application (simulated)...'
+                bat 'echo Deployment completed.'
             }
         }
     }
 
     post {
         always {
-            echo 'Pipeline finished.'
+            echo '📝 Pipeline finished.'
         }
         success {
-            echo 'Build was successful!'
+            echo '🎉 Build was successful!'
         }
         failure {
-            echo 'Build failed.'
+            echo '❌ Build failed.'
         }
     }
 }
